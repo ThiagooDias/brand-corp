@@ -3,19 +3,8 @@ import React from "react";
 const NavBar = () => {
   return (
     <>
-      <div className="navbar">
+      <div className="mx-[10%] py-6">
         <img src="" alt="Logo" />
-        <div>
-          <ul>
-            <li>
-              <a href="/">Sobre nós</a>
-            </li>
-            <li>
-              <a href="/">Nossos Clientes</a>
-            </li>
-          </ul>
-          <button>Entre em contato</button>
-        </div>
       </div>
     </>
   );
