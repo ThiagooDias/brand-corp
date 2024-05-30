@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "./Button";
 import notebookImg from "../assets/notebook.png";
 import bgVetor from "../assets/bg-vetor.svg"
@@ -14,7 +13,7 @@ const Header = () => {
 
       <div className=" mx-[10%] py-6 flex flex-col md:flex-row items-center">
         <div className="text-center md:text-left md:w-1/2">
-          <h1 className="font-extrabold text-6xl">
+          <h1 className="font-extrabold text-7xl">
             Seja nosso próximo case de
             <span className="text-primary"> sucesso.</span>
           </h1>

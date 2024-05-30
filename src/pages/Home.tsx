@@ -1,9 +1,9 @@
-import React from "react";
 import Header from "../components/Header";
 import OurProcess from "../components/OurProcess";
 import Benefits from "../components/Benefits";
 import Costumers from "../components/Costumers";
 import FormLead from "../components/Form";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -22,6 +22,8 @@ const Home = () => {
         <Benefits />
         <Costumers />
         <FormLead />
+
+        <Footer/>
       </main>
     </div>
   );

@@ -1,4 +1,6 @@
-import React, { ReactNode, FC } from "react";
+import { ReactNode, FC, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface CardProcessProps {
   icon: string;
@@ -11,8 +13,15 @@ const CardProcess: FC<CardProcessProps> = ({
   children,
   title,
 }: CardProcessProps) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="card-process">
+    <div className="card-process" data-aos="fade-down">
       <div className="bg"></div>
       <div className="blob"></div>
       <div className="bg-blob"></div>
@@ -20,7 +29,9 @@ const CardProcess: FC<CardProcessProps> = ({
         <div className="flex justify-center ">
           <img src={icon} alt="icon" className="size-14" />
         </div>
-        <h3 className="text-black text-center font-extrabold text-2xl">{title}</h3>
+        <h3 className="text-black text-center font-extrabold text-2xl">
+          {title}
+        </h3>
         <p className="text-black font-medium text-sm">{children}</p>
       </div>
     </div>

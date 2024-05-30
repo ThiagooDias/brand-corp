@@ -1,9 +1,8 @@
-import React from "react";
 import CardHero from "./CardHero";
 
 export const Hero = () => {
   return (
-    <section className="flex p-10 gap-24 justify-center">
+    <section className="flex flex-wrap p-10 gap-24 justify-center">
       <CardHero targetNumber={500} suffix="K">
         Gerenciado <br /> em anúncios
       </CardHero>

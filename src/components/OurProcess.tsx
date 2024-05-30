@@ -1,4 +1,3 @@
-import React from "react";
 import CardProcess from "./CardProcess";
 import Title from "./Title";
 import analiseDeDados from "../assets/icons/analise-de-dados.png";
@@ -10,7 +9,7 @@ const OurProcess = () => {
   return (
     <section>
       <Title>Nosso processo</Title>
-      <div className="flex justify-around">
+      <div className="flex flex-wrap mx-12 justify-around">
         <CardProcess icon={analiseDeDados} title="Análise e otimização">
           Verificamos os pontos fracos do seu negócio no digital e otimizamos
           seus perfis para mais ganho de credibilidade.

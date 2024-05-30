@@ -1,30 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home.tsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    // errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      // {
-      //   path: "/about-us",
-      //   element: <AboutUs/>
-      // }
-    ],
-  },
-]);
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
